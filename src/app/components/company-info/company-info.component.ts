@@ -17,16 +17,16 @@ export class CompanyInfoComponent implements OnInit {
     private companyDataService: CompanyDataService) {}
 
   ngOnInit() {
-    this.activatedRoute.params.subscribe(data => {
-      this.isLoading = true;
-      this.companyDataService.getCompanyData(data.slug).subscribe((company: any) => {
-          if(!company){
-            this.router.navigateByUrl("/companies");
-          }
-        this.company = company;
-        this.isLoading = false;
-      })
-    })
+  //   this.activatedRoute.params.subscribe(data => {
+  //     this.isLoading = true;
+  //     this.companyDataService.getCompanyData(data.slug).subscribe((company: any) => {
+  //         if(!company){
+  //           this.router.navigateByUrl("/companies");
+  //         }
+  //       this.company = company;
+  //       this.isLoading = false;
+  //     })
+  //   })
   }
 
 }
