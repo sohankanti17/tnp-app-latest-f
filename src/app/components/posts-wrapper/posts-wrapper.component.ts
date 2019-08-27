@@ -10,8 +10,7 @@ import { CompanyDataService } from '../../services/company-data.service';
   styleUrls: ['./posts-wrapper.component.css']
 })
 export class PostsWrapperComponent implements OnInit {
-  companyData: ICompanyData;
-  slug: string;
+  blogPosts: any;
   isLoading: boolean = false;
 
   constructor(private companyDataService: CompanyDataService, 
@@ -21,13 +20,12 @@ export class PostsWrapperComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe(data => {
       this.isLoading = true;
-      this.slug = data.slug;
-      this.companyDataService.getCompanyData(this.slug).subscribe((data: ICompanyData) => {
+      this.companyDataService.getBlogPosts(data.slug).subscribe((data: any) => {
         if(!data){
           this.router.navigateByUrl("/companies");
         }
 
-        this.companyData = data;
+        this.blogPosts = data;
         this.isLoading = false;
       });
     });

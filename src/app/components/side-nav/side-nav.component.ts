@@ -10,12 +10,16 @@ import { ICompany } from '../../interfaces';
 })
 export class SideNavComponent implements OnInit {
   companies: ICompany[];
+  isLoading: boolean;
 
-  constructor(private companyDataService: CompanyDataService) {}
+  constructor(private companyDataService: CompanyDataService) { 
+    this.isLoading = true;
+  }
 
   ngOnInit() {
     this.companyDataService.getCompanies().subscribe((data: ICompany[]) => {
       this.companies = data;
+      this.isLoading = false;
     });
   }
 }

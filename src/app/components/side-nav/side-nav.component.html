@@ -1,9 +1,17 @@
-<div class="list-group fix-pos">
-  <a class="list-group-item mb-1 shadow border border-primary border-left-0 border-top-0 border-right-0 d-flex justify-content-between align-items-center list-group-item-action"
-  *ngFor="let company of companies"
-  [routerLink]="['companies', company.slug]"
-  routerLinkActive="active">
-    {{ company.name }}
-		<span class="badge badge-primary badge-pill">{{ company.postsCount }}</span>
-  </a>
+<div class="fix-pos">
+  <h4 class="container bg-primary font-weight-bold text-light shadow py-2 mb-3">Companies</h4>
+
+	<p class="text-primary py-4 text-center" *ngIf="isLoading === true; else navigation">
+		<span class="fa fa-spinner fa-pulse fa-2x "></span>
+  </p> 
+
+	<ng-template #navigation>
+    <div class="list-group fix-pos">
+      <a class="list-group-item mb-1 shadow border border-primary border-left-0 border-top-0 border-right-0 d-flex justify-content-between align-items-center list-group-item-action"
+      *ngFor="let company of companies" [routerLink]="['companies', company.slug]" routerLinkActive="active">
+        {{ company.name }}
+        <span class="badge badge-secondary badge-pill">{{ company.postsCount }}</span>
+      </a>
+    </div>
+  </ng-template>
 </div>

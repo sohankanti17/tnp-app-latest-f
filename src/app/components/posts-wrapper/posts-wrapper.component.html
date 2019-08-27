@@ -1,15 +1,15 @@
 <div class="container">
-	<p class="container bg-primary text-light shadow font-weight-bold py-2 mb-4" style="font-size: 20px;">Blogs</p>
+	<h4 class="container bg-primary font-weight-bold text-light shadow py-2 mb-3">Blogs</h4>
 
 	<p class="text-primary py-4 text-center" *ngIf="isLoading === true; else content">
 		<span class="fa fa-spinner fa-pulse fa-2x"></span>
   </p>
   
   <ng-template #content>
-    <p class="text-danger py-4 text-center" *ngIf="companyData.posts.length === 0; else posts">No posts found</p> 
+    <p class="text-danger py-4 text-center" *ngIf="blogPosts.length === 0; else posts">No posts found</p> 
 
     <ng-template #posts>
-      <app-post *ngFor="let post of companyData.posts" [postData]="post"></app-post>
+      <app-post *ngFor="let post of blogPosts" [postData]="post"></app-post>
     </ng-template>
   </ng-template>
 </div>

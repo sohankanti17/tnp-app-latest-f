@@ -197,7 +197,8 @@ const companyDataDB: ICompanyData[] = [
         postedOn: "26 June 2018",
         commentsCount: 12,
         viewsCount: 26
-      }
+      },
+      
     ]
   },
   {
