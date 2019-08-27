@@ -23,7 +23,7 @@ export class PostsWrapperComponent implements OnInit {
 
       this.companyDataService.getCompanyData(this.slug).subscribe((data: ICompanyData) => {
         if(!data){
-          this.router.navigateByUrl("/compa");
+          this.router.navigateByUrl("/companies");
         }
 
         this.companyData = data;
