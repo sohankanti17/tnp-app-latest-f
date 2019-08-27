@@ -7,5 +7,5 @@ html, body{
 
 .fix-pos{
   position:sticky;
-  top:0;
+  top:0px;
 }

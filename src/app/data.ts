@@ -198,7 +198,30 @@ const companyDataDB: ICompanyData[] = [
         commentsCount: 12,
         viewsCount: 26
       },
-      
+      {
+        title: "Interview experience for 2019: an easy one!",
+        shortContent: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores deserunt fuga eos quidem eveniet. Excepturi eius labore nesciunt quasi ut architecto aliquid exercitationem itaque ratione asperiores. Officia excepturi quasi itaque. ",
+        author: "Sohan Prasad Kanti",
+        postedOn: "8 June 2019",
+        commentsCount: 12,
+        viewsCount: 26
+      },
+      {
+        title: "Interview experience for 2019: a great one!",
+        shortContent: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores deserunt fuga eos quidem eveniet. Excepturi eius labore nesciunt quasi ut architecto aliquid exercitationem itaque ratione asperiores. Officia excepturi quasi itaque. ",
+        author: "Charu Suri",
+        postedOn: "30 June 2019",
+        commentsCount: 10,
+        viewsCount: 12
+      },
+      {
+        title: "Interview experience for 2018",
+        shortContent: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores deserunt fuga eos quidem eveniet. Excepturi eius labore nesciunt quasi ut architecto aliquid exercitationem itaque ratione asperiores. Officia excepturi quasi itaque. ",
+        author: "Ibrahim Mehta",
+        postedOn: "15 June 2018",
+        commentsCount: 36,
+        viewsCount: 75
+      }
     ]
   },
   {
